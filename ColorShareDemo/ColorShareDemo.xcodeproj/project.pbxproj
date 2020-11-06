@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5198F2D82554F311008669BA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198F2D72554F311008669BA /* ActionViewController.swift */; };
+		5198F2DB2554F45C008669BA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198F2D72554F311008669BA /* ActionViewController.swift */; };
 		51BD82CF253ED22F00E4284B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD82CE253ED22F00E4284B /* AppDelegate.swift */; };
 		51BD82D1253ED22F00E4284B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD82D0253ED22F00E4284B /* SceneDelegate.swift */; };
 		51BD82D3253ED22F00E4284B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD82D2253ED22F00E4284B /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5198F2D62554F310008669BA /* ColorShareDemoAction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorShareDemoAction-Bridging-Header.h"; sourceTree = "<group>"; };
+		5198F2D72554F311008669BA /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		51BD82CB253ED22F00E4284B /* ColorShareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorShareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BD82CE253ED22F00E4284B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BD82D0253ED22F00E4284B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,10 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				51BD82E9253ED2DF00E4284B /* Media.xcassets */,
+				5198F2D72554F311008669BA /* ActionViewController.swift */,
 				51BD82EB253ED2DF00E4284B /* ActionViewController.h */,
 				51BD82EC253ED2DF00E4284B /* ActionViewController.m */,
 				51BD82EE253ED2DF00E4284B /* MainInterface.storyboard */,
 				51BD82F1253ED2DF00E4284B /* Info.plist */,
+				5198F2D62554F310008669BA /* ColorShareDemoAction-Bridging-Header.h */,
 			);
 			path = ColorShareDemoAction;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 					};
 					51BD82E6253ED2DF00E4284B = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -226,6 +233,7 @@
 			files = (
 				51BD82D3253ED22F00E4284B /* ViewController.swift in Sources */,
 				51BD82CF253ED22F00E4284B /* AppDelegate.swift in Sources */,
+				5198F2DB2554F45C008669BA /* ActionViewController.swift in Sources */,
 				51BD82D1253ED22F00E4284B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5198F2D82554F311008669BA /* ActionViewController.swift in Sources */,
 				51BD82ED253ED2DF00E4284B /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,11 +404,13 @@
 		51BD82E0253ED23000E4284B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UAD2C9CSW5;
 				INFOPLIST_FILE = ColorShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,11 +425,13 @@
 		51BD82E1253ED23000E4284B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UAD2C9CSW5;
 				INFOPLIST_FILE = ColorShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +446,7 @@
 		51BD82F6253ED2DF00E4284B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UAD2C9CSW5;
 				INFOPLIST_FILE = ColorShareDemoAction/Info.plist;
@@ -444,6 +458,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wizeyes.ColorShareDemo.ColorShareDemoAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorShareDemoAction/ColorShareDemoAction-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -451,6 +468,7 @@
 		51BD82F7253ED2DF00E4284B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UAD2C9CSW5;
 				INFOPLIST_FILE = ColorShareDemoAction/Info.plist;
@@ -462,6 +480,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wizeyes.ColorShareDemo.ColorShareDemoAction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ColorShareDemoAction/ColorShareDemoAction-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
